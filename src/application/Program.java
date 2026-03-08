@@ -20,5 +20,10 @@ public class Program {
 		for(Seller lista: list) {
 			System.out.println(lista);
 		}
+		System.out.println("\n=== TEST 3: seller findAll===");
+		list = sellerDao.finAll();
+		for(Seller lista: list) {
+			System.out.println(lista);
+		}
 	}
 }
