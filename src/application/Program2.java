@@ -16,5 +16,10 @@ public class Program2 {
 		System.out.println("\n=== TEST 2: Department Update===");
 		dep.setNome("Informatica");
 		depart.update(dep);
+		
+		System.out.println("\n=== TEST 3: Department FindById===");
+		dep = depart.findById(1);
+		System.out.println(dep);
+		
 	}
 }
