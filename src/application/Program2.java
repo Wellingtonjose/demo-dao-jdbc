@@ -6,10 +6,15 @@ import model.entities.Department;
 
 public class Program2 {
 	public static void main(String[] args) {
-		System.out.println("\n=== TEST 4: Department Insert===");
+		
+		System.out.println("\n=== TEST 1: Department Insert===");
 		Department dep = new Department(null, "Roupas");
 		DepartmentDao depart = DaoFactory.createDepartmentDao();
 		depart.insert(dep);
 		System.out.println("Insert! New ID " + dep.getId());
+		
+		System.out.println("\n=== TEST 2: Department Update===");
+		dep.setNome("Informatica");
+		depart.update(dep);
 	}
 }
