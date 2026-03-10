@@ -1,12 +1,15 @@
 package application;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import model.dao.DaoFactory;
 import model.dao.DepartmentDao;
 import model.entities.Department;
 
 public class Program2 {
 	public static void main(String[] args) {
-		
+		List<Department> list = new ArrayList<>();
 		System.out.println("\n=== TEST 1: Department Insert===");
 		Department dep = new Department(null, "Roupas");
 		DepartmentDao depart = DaoFactory.createDepartmentDao();
@@ -21,5 +24,10 @@ public class Program2 {
 		dep = depart.findById(1);
 		System.out.println(dep);
 		
+		System.out.println("\n=== TEST 4: Department FindAll===");
+		list = depart.findAll();
+		for(Department lista : list) {
+			System.out.println(lista);
+		}
 	}
 }
